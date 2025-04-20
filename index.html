@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Image Viewer</title>
+  <title>Image Launcher</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 20px;
-    }
-    .buttons {
-      margin-bottom: 20px;
     }
     button {
       margin: 5px;
@@ -19,35 +16,25 @@
       font-size: 14px;
       cursor: pointer;
     }
-    img {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
   </style>
 </head>
 <body>
 
-  <h1>Image Viewer</h1>
-  
-  <div class="buttons">
-    <button onclick="showImage('landing_page.png')">Landing Page 1</button>
-    <button onclick="showImage('landing_page2.png')">Landing Page 2</button>
-    <button onclick="showImage('minilogo.png')">Mini Logo</button>
-    <button onclick="showImage('dashboard.png')">Dashboard</button>
-    <button onclick="showImage('add_transaction.png')">Add Transaction</button>
-    <button onclick="showImage('predict.png')">Predict</button>
-    <button onclick="showImage('gmail.png')">Gmail</button>
-  </div>
+  <h1>Open Image in New Tab</h1>
 
-  <div>
-    <img id="viewer" src="landingpage.png" alt="Selected Image" />
+  <div class="buttons">
+    <button onclick="openImage('landing_page.png')">Landing Page 1</button>
+    <button onclick="openImage('landing_page2.png')">Landing Page 2</button>
+    <button onclick="openImage('minilogo.png')">Mini Logo</button>
+    <button onclick="openImage('dashboard.png')">Dashboard</button>
+    <button onclick="openImage('add_transaction.png')">Add Transaction</button>
+    <button onclick="openImage('predict.png')">Predict</button>
+    <button onclick="openImage('gmail.png')">Gmail</button>
   </div>
 
   <script>
-    function showImage(imageName) {
-      document.getElementById('viewer').src = imageName;
+    function openImage(imageName) {
+      window.open(imageName, '_blank');
     }
   </script>
 
